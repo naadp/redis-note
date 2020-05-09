@@ -1,2 +1,2 @@
 # redis-note
-redis读书笔记
+redis 读书笔记
