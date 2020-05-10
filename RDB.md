@@ -1,7 +1,3 @@
----
-typora-copy-images-to: resources
----
-
 #### 简介
 RDB持久化既可以手动执行，也可以根据服务器配置选项定期执行，该功能可以将某个时间点上的数据库状态保存到一个RDB文件中。
 RDB持久化功能所生成的RDB文件是一个经过压缩的二进制文件，通过该文件可以还原生成RDB文件时的数据库状态。
@@ -44,7 +40,7 @@ struct saveparam {
     int changes;
 };
 ```
-![2020-05-10_214517](E:\GitHub\naadp\redis-note\resources\2020-05-10_214517.png)
+![2020-05-10_214517](./resources/2020-05-10_214517.png)
 
 除了saveparams数组之外，服务器状态还维持着一个dirty计数器，以及一个lastsave属性：
 dirty计数器记录距离上一次成功执行SAVE命令或者BGSAVE命令之后，服务器对数据库状态（服务器中的所有数据库）进行了多少次修改（包括写入、删除、更新等操作）。
